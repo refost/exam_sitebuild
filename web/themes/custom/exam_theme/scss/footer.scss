@@ -1,0 +1,15 @@
+@import "variables";
+@import "mixin";
+
+.bottom{
+  background-color: $black;
+  .footer{
+    padding: 37px 0;
+    border-top:1px solid $black;
+  }
+  .region-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

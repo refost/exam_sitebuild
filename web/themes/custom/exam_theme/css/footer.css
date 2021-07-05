@@ -1,0 +1,14 @@
+.bottom {
+  background-color: #373645;
+}
+.bottom .footer {
+  padding: 37px 0;
+  border-top: 1px solid #373645;
+}
+.bottom .region-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=footer.css.map */

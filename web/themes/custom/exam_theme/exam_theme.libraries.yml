@@ -1,0 +1,15 @@
+framework:
+  css:
+    theme:
+      css/style.css: {}
+
+global:
+  css:
+    component:
+      css/header.css: {}
+      css/footer.css: {}
+      css/global.css: {}
+      css/views.css: {}
+      css/form.css: {}
+      css/responsive.css: {}
+

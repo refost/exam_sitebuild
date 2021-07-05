@@ -1,0 +1,48 @@
+@mixin title{
+  text-transform: uppercase;
+  color: $black;
+  font-weight: bold;
+}
+
+@mixin parag{
+  color: $gray;
+  text-transform: uppercase;
+}
+
+@mixin btn{
+  background-color: $blue;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  width: 115px;
+  height: 30px;
+  padding: 5px 0 5px 0;
+  &:hover{
+    text-decoration: none;
+    background-color: $white-blue;
+  }
+}
+
+@mixin tit-cat{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+@mixin input{
+  border-radius: 0;
+  background: $white;
+  border-color: $gray;
+}
+
+@mixin gradient{
+  background: repeating-linear-gradient(
+      -45deg,
+      $white,
+      $white 5px,
+      $gray 5px,
+      $gray 6px
+  );
+}

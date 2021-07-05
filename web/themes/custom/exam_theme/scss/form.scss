@@ -1,0 +1,72 @@
+@import "variables";
+@import "mixin";
+
+
+.block-webform{
+  .block-title{
+    position: relative;
+    padding-bottom: 50px;
+    text-align: center;
+    @include tit-cat;
+    &:before{
+      content:"";
+      width: 55px;
+      height:4px;
+      background-color: $gray;
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+  }
+}
+
+.block-webform{
+  margin-top: 30px;
+}
+
+.webform-submission-contacts-form{
+  display: flex;
+  justify-content: center;
+  .form-type-processed-text{
+    width: 450px;
+  }
+  .form-item{
+    margin-bottom: 10px;
+  }
+    .form-control{
+      width: 95%;
+      height: 52px;
+      border-radius: 0;
+      border-color: $mid-gray;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
+      box-shadow: none;
+    }
+  .form-textarea{
+    height: 195px;
+    resize: none;
+  }
+  .webform-button--submit{
+    background-color: $red;
+    width: 190px;
+    height: 60px;
+    text-transform: uppercase;
+    border: none;
+  }
+  .addres{
+    width: 250px;
+    padding-bottom: 35px;
+    font-size: 14px;
+    color: $black;
+    span{
+      display: block;
+    }
+    .country{
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-bottom: 3px;
+    }
+  }
+}

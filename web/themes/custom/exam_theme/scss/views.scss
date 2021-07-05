@@ -1,0 +1,451 @@
+@import "variables";
+@import "mixin";
+.views-element-container{
+  .block-title{
+    position: relative;
+    @include title();
+  }
+}
+
+.block-views-blockabout-block-1{
+  padding-top: 105px;
+  padding-bottom: 150px;
+  ul{
+    padding: 0;
+  }
+  li{
+    padding: 10px 0;
+    border-top: 4px solid $black;
+    border-bottom: 4px solid $blue;
+    display: flex;
+    justify-content: space-between;
+  }
+  .views-field-title{
+    font-size: 30px;
+    @include title();
+  }
+  .views-field-field-project-image,.views-field-field-service-image,
+  .views-field-field-worker-image{
+    .img-responsive{
+      max-width: 290px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .views-field{
+    display: flex;
+    align-items: center;
+  }
+  .views-field-body{
+
+    font-size: 20px;
+    @include parag();
+    p{
+      text-align: center;
+      height: 30px;
+      overflow: hidden;
+      width: 90%;
+      text-align: center;
+    }
+  }
+  .views-field-view-node{
+    a{
+      @include btn();
+    }
+  }
+}
+
+
+.block-views-blockservices-block-block-1,
+.block-views-blockproject-block-block-1,
+.block-views-blockour-page-block-1{
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    height: 1px;
+    width: 100%;
+    background-color: $gray;
+  }
+  .block-title{
+    display: block;
+    background: $white;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .view-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .views-row{
+    width:22%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .views-field-title{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    @include tit-cat();
+  }
+  .views-field-body{
+    text-transform: uppercase;
+    color: $gray;
+    text-align: center;
+  }
+  }
+
+.block-views-blockservices-block-block-1{
+  margin-bottom: 150px;
+  padding-top: 78px;
+  .block-title{
+    top: -120px;
+    width: 170px;
+    font-weight: bold;
+  }
+
+  .views-field-view-node{
+    padding-top: 25px;
+    a{
+      @include btn();
+    }
+  }
+
+}
+
+.block-views-blockproject-block-block-1{
+  &:before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    height: 1px;
+    width: 100%;
+    background-color: $gray;
+  }
+  .block-title{
+    width: 170px;
+    font-weight: normal;
+    top:-43px
+  }
+  .views-row{
+    background-color: $white;
+    border-bottom: 1px solid $black;
+  }
+
+  .views-field-field-project-category{
+    padding-bottom: 18px;
+    a{
+      font-size: 15px;
+      text-transform: uppercase;
+      &:hover{
+        text-decoration: none;
+        font-weight: bold;
+      }
+      &[href$="/web-development-0"]{
+        color: $green;
+      }
+      &[href$="/php-development-0"]{
+        color: $violet;
+      }
+      &[href$="/app-development-0"]{
+        color: $red;
+      }
+      &[href$="/drupal-project"]{
+        color: $white-blue;
+      }
+    }
+  }
+  .views-field-view-node{
+    a{
+      @include btn;
+      width: 70px;
+      height: 30px;
+      background-color: $black;
+    }
+  }
+}
+
+.block-views-blockour-page-block-1{
+  margin-top: 140px;
+
+  .block-title{
+    top: -41px;
+    width: 170px;
+    font-weight: bold;
+  }
+  .views-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .views-field-title{
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+
+    @include tit-cat();
+  }
+  .views-field-field-work-position{
+    width: 100%;
+    text-transform: uppercase;
+    color: $gray;
+    text-align: center;
+  }
+  .views-field-view-node{
+    padding: 10px 0;
+    width: 100%;
+    a{
+      margin: 0 auto;
+      @include btn;
+      background-color: $black;
+    }
+  }
+  .views-field-field-social,.views-field-link-flag{
+    margin: 0 auto;
+  }
+  .social-links{
+    a{
+      display: inline-block;
+      padding-left: 10px;
+      &:first-child{
+        padding: 0;
+      }
+    }
+  }
+
+  .views-field-link-flag{
+    .flag-throbber{
+      display: none;
+    }
+    .action-unflag,.action-flag{
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 15px;
+      a{
+        display: block;
+        color: transparent;
+      }
+    }
+    .action-flag{
+      background-image: url("../images/like.png");
+    }
+    .action-unflag{
+      background-image: url("../images/unlike.png");
+    }
+  }
+}
+
+.block-views-blocknews-block-1{
+  position: relative;
+  margin-top: 180px;
+  padding-bottom: 75px;
+  &:before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    height: 1px;
+    width: 100%;
+    background-color: $gray;
+  }
+    .block-title{
+      width: 130px;
+      top: -52px;
+      display: block;
+      background: $white;
+      text-align: center;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+      z-index: 1;
+    }
+
+  .views-exposed-form{
+    padding-top: 10px;
+  }
+  .form--inline{
+    padding: 2px;
+    width: 417px;
+    background-color: $light-gray;
+    .form-control{
+      width: 340px;
+      height: 38px;
+      border-color: $mid-gray;
+      box-shadow: none;
+    }
+    .form-submit{
+      margin-right: 0;
+      width: 65px;
+      height: 38px;
+    }
+  }
+  .view-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .views-row{
+    padding: 20px;
+    background-color: $white;
+    width: 610px;
+  }
+  .new-header{
+    display: flex;
+  }
+  .date{
+    border-right: 1px solid $gray;
+    padding-right: 15px;
+    text-align: center;
+    .views-field-created{
+      font-size: 24px;
+      color: $black;
+      text-transform: uppercase;
+      line-height: 24px;
+    }
+    .views-field-created-2{
+      font-size: 50px;
+      color: $blue;
+      font-weight: bold;
+      line-height: 50px;
+    }
+    .views-field-created-3{
+      font-size: 14px;
+      color: $gray;
+      font-weight: lighter;
+      line-height: 7px;
+    }
+  }
+  .author{
+    font-size: 10px;
+    display: flex;
+    vertical-align: center;
+    padding-left: 15px;
+    text-transform: uppercase;
+    .views-field-roles-target-id {
+      padding-left: 10px;
+      padding-right: 5px;
+      color: $gray;
+    }
+    .views-field-field-name{
+      display: flex;
+      justify-content: space-around;
+      &:after{
+        padding: 0 5px;
+        color: #000;
+        content: "/";
+      }
+    }
+    .views-field-field-work-position{
+      color: $blue;
+
+      .field-content {
+      }
+    }
+  }
+
+  .views-field-created-1{
+    @include parag;
+    font-size: 10px;
+    margin-left: auto;
+    .field-content{
+      display: block;
+      width: 100px;
+      text-align: right;
+    }
+  }
+  .news-body{
+    margin-top: 19px;
+    margin-left: 71px;
+    padding-left: 15px;
+    border-left: 1px solid $gray;
+    .views-field-title{
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 23px;
+      color: $black;
+    }
+    .views-field-body{
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .views-field-view-node{
+      a{
+        margin-top: 15px;
+      margin-left: auto;
+      @include btn;
+        width: 98px;
+      background-color: $black;
+      color: $white;
+        line-height: 23px;
+    }
+    }
+  }
+}
+
+#block-exam-theme-views-block-project-block-block-1,
+#block-exam-theme-views-block-news-block-1{
+  @include gradient;
+}
+
+.wrap{
+  #block-exam-theme-views-block-project-block-block-1,
+  #block-exam-theme-views-block-news-block-1{
+    background: none;
+  }
+}
+
+.block-views-blockclients-block-1 {
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  border-top: 1px solid $gray;
+  .block-title{
+    width: 130px;
+    top: -53px;
+    display: block;
+    background: $white;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .slick-slider {
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .slick-slide{img{
+      margin: 0 auto;
+    }
+  }
+}
+.view-clients-view,.view-news-view,.view-projects,.view-services,.view-team{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .view-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .views-row{
+      text-align: center;
+    }
+  }
+  .views-field-title{
+    padding: 5px;
+      a {
+        color: $black;
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+  }
+}

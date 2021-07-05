@@ -1,0 +1,135 @@
+@import "variables";
+@import "mixin";
+
+.back{
+  padding-top: 40px;
+  padding-bottom: 540px;
+  background-image: url("../images/header.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar-default{
+  padding: 0;
+  border:none;
+  display: flex;
+  align-items: center;
+   justify-content: space-between;
+  border-radius: 0;
+  z-index: 1;
+  &:before, &:after{
+    display: none;
+  }
+}
+
+.region-navigation-collapsible{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .search-block-form{
+    height: 38px;
+    padding-left: 25px;
+  }
+}
+
+.navbar-nav{
+  li {
+    a {
+      padding: 15px 10px;
+    }
+  }
+}
+
+.menu--main{
+  .first{
+    background-image: url("../images/Homepage-menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    a {
+      opacity: 0;
+    }
+    }
+  li{
+    a{
+      text-transform: uppercase;
+    }
+    &::before{
+      content: "";
+      width: 28px;
+      height: 8px;
+      position: absolute;
+      background: $blue;
+      top: 76px;
+      left: 50%;
+      transform: translate(-50%,0);
+      display: none;
+    }
+    &:hover:before{
+      display: block;
+    }
+  }
+  .active{
+    &:before{
+      display: block;
+    }
+  }
+  .active{
+    .is-active{
+      background: none !important;
+    }
+  }
+}
+
+.input-group{
+  .form-search{
+    width: 170px;
+    height: 38px;
+    @include input;
+    &::placeholder{
+      color: $white;
+    }
+  }
+  .btn-primary{
+    width: 39px;
+    height: 38px;
+    @include input;
+    .icon{
+      color: $gray;
+    }
+    &:active{
+      background: $gray;
+      .icon{
+        color: $white;
+      }
+    }
+  }
+}
+
+.slogan-text{
+  width: 395px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 300px;
+  left: 17%;
+  text-transform: uppercase;
+  color: $blue;
+  line-height: normal;
+  p{
+    margin: 0 auto;
+  }
+  .main-word{
+    display: block;
+    width: 100%;
+    font-size: 66px;
+    color: $white;
+    line-height: 60px;
+  }
+}
+
+.navbar-toggle{
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0;
+}
